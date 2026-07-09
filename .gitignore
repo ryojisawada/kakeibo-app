@@ -1,0 +1,19 @@
+# 依存関係
+node_modules/
+
+# 環境変数(APIキーなどの秘密情報)
+.env
+.env.local
+.env.*.local
+
+# ビルド成果物
+dist/
+build/
+
+# ログ
+npm-debug.log*
+*.log
+
+# OS/エディタ
+.DS_Store
+.vscode/
