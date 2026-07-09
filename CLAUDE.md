@@ -21,7 +21,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - `src/components/` — アップロードUI・明細一覧・カテゴリ別円グラフ・月別棒グラフ(Chart.js)。
   - `src/utils/categories.js` — カテゴリと表示色の対応(`server/src/services/claudeService.js` の
     `CATEGORIES` と一致させること)。
+  - `src/utils/validation.js` — 解析結果の検証ロジック(金額マイナス検知・重複レシート検知)。
+    レシート1枚分の商品には共通の `receiptId` を付与し、日付+合計金額の一致で重複を判定する。
   - Vite の dev サーバーは `/api` を `http://localhost:3001` にプロキシする(`vite.config.js`)。
+  - アップロード〜追加は2段階フロー: 解析結果は `ReceiptUploader` 内で一旦保留し、警告
+    (マイナス金額・重複疑い)を表示したうえでユーザーが確認してから明細一覧に追加する。
 
 ## Development commands
 

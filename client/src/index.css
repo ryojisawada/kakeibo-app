@@ -90,6 +90,49 @@ section {
   margin-top: 12px;
 }
 
+.uploader-result {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.uploader-result h3 {
+  margin-top: 0;
+}
+
+.warning-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background-color: rgba(250, 178, 25, 0.15);
+  border-left: 4px solid #fab219;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+}
+
+.uploader-result-list {
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--text-secondary);
+}
+
+.uploader-result-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.secondary-button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
 .charts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
